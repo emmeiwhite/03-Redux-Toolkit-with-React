@@ -25,7 +25,12 @@ const BurgerView = () => {
       </p>
       <div className="flex gap-4">
         <button
-          className="px-2 py-1 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer"
+          disabled={burgerCount === 0}
+          className={`px-2 py-1 rounded transition  ${
+            burgerCount === 0
+              ? 'bg-gray-300 cursor-not-allowed text-white'
+              : ' bg-orange-300 hover:bg-orange-400 cursor-pointer'
+          }`}
           onClick={() => dispatch(orderBurger())}>
           Order Burger
         </button>
