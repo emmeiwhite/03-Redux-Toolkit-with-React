@@ -1,7 +1,10 @@
+import PizzaView from './features/pizza/PizzaView'
 function App() {
   return (
     <>
-      <h1>Wind in Coding is Tailwind</h1>
+      <main className="max-w-6xl mx-auto px-5">
+        <PizzaView />
+      </main>
     </>
   )
 }
