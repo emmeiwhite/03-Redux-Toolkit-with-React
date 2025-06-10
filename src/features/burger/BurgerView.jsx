@@ -1,11 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { orderBurger, reStockBurger } from './burgerSlice'
+import ReStockForm from '../../components/ReStockForm'
 
 const BurgerView = () => {
   const burgerCount = useSelector(state => {
     console.log(state)
     return state.burger.burgerCount
   })
+
+  const handleReStock = qty => {
+    console.log(qty)
+  }
 
   const dispatch = useDispatch()
   return (
@@ -22,11 +27,13 @@ const BurgerView = () => {
           Order Burger
         </button>
 
-        <button
+        {/* <button
           className="px-2 py-1 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer"
           onClick={() => dispatch(reStockBurger(15))}>
           ReStock Burgers
-        </button>
+        </button> */}
+
+        <ReStockForm onRestock={handleReStock} />
       </div>
     </div>
   )
