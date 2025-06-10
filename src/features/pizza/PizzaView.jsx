@@ -12,11 +12,11 @@ const PizzaView = () => {
 
   return (
     <div className="md:py-12">
-      <h1 className="text-2xl">Pizza Component</h1>
+      {/* <h1 className="text-2xl font-semibold">Pizzas</h1> */}
 
-      <p className="my-4">
+      {/* <p className="my-4">
         Pizza Count: <span className="text-xl font-bold">{pizzaCount}</span>
-      </p>
+      </p> */}
       <div className="flex gap-4  items-center flex-wrap">
         <button
           disabled={pizzaCount === 0}

@@ -10,7 +10,9 @@ const pizzaSlice = createSlice({
   initialState,
   reducers: {
     orderPizza: state => {
-      state.pizzaCount--
+      if (state.pizzaCount > 0) {
+        state.pizzaCount--
+      }
     },
     reStockPizza: (state, action) => {
       state.pizzaCount += action.payload

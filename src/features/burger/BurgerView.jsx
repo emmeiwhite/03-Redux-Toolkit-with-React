@@ -18,11 +18,11 @@ const BurgerView = () => {
 
   return (
     <div className="md:py-12">
-      <h1 className="text-2xl">Burger Component</h1>
+      {/* <h1 className="text-2xl font-semibold">Burgers</h1>
 
       <p className="my-4">
         Burger Count: <span className="text-xl font-bold">{burgerCount}</span>
-      </p>
+      </p> */}
       <div className="flex gap-4 items-center flex-wrap">
         <button
           disabled={burgerCount === 0}

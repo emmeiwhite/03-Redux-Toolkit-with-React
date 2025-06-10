@@ -9,7 +9,9 @@ const burgerSlice = createSlice({
   initialState,
   reducers: {
     orderBurger: state => {
-      state.burgerCount--
+      if (state.burgerCount > 0) {
+        state.burgerCount--
+      }
     },
     reStockBurger: (state, action) => {
       state.burgerCount += action.payload
