@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  burgerCount: 107
+  burgerCount: 110
 }
 const burgerSlice = createSlice({
   name: 'burger',
