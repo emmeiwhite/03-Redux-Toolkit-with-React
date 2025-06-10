@@ -8,11 +8,14 @@ const BurgerView = () => {
     return state.burger.burgerCount
   })
 
+  const dispatch = useDispatch()
+
   const handleReStock = qty => {
     console.log(qty)
+    // Now we'll reStock our burgers as per the quantity
+    dispatch(reStockBurger(qty))
   }
 
-  const dispatch = useDispatch()
   return (
     <div className="py-12">
       <h1 className="text-2xl">Burger Component</h1>
@@ -26,12 +29,6 @@ const BurgerView = () => {
           onClick={() => dispatch(orderBurger())}>
           Order Burger
         </button>
-
-        {/* <button
-          className="px-2 py-1 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer"
-          onClick={() => dispatch(reStockBurger(15))}>
-          ReStock Burgers
-        </button> */}
 
         <ReStockForm onRestock={handleReStock} />
       </div>
