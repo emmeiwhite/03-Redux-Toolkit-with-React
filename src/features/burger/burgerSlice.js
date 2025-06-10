@@ -10,6 +10,9 @@ const burgerSlice = createSlice({
   reducers: {
     orderBurger: state => {
       state.burgerCount--
+    },
+    reStockBurger: (state, action) => {
+      state.burgerCount += action.payload
     }
     // resetBurger: state => {
     //   state.burgerCount = 0
@@ -24,4 +27,4 @@ const burgerSlice = createSlice({
 
 // export burgerReducer and action creators
 export const burgerReducer = burgerSlice.reducer
-export const { orderBurger, resetBurger } = burgerSlice.actions
+export const { orderBurger, resetBurger, reStockBurger } = burgerSlice.actions

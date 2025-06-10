@@ -11,6 +11,9 @@ const pizzaSlice = createSlice({
   reducers: {
     orderPizza: state => {
       state.pizzaCount--
+    },
+    reStockPizza: (state, action) => {
+      state.pizzaCount += action.payload
     }
   },
   extraReducers: builder => {
@@ -23,4 +26,4 @@ const pizzaSlice = createSlice({
 // console.log(pizzaSlice)
 // Export action creators and reducer
 export const pizzaReducer = pizzaSlice.reducer
-export const { orderPizza, resetPizza } = pizzaSlice.actions
+export const { orderPizza, resetPizza, reStockPizza } = pizzaSlice.actions

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { orderBurger } from './burgerSlice'
+import { orderBurger, reStockBurger } from './burgerSlice'
 
 const BurgerView = () => {
   const burgerCount = useSelector(state => {
@@ -15,13 +15,19 @@ const BurgerView = () => {
       <p className="my-4">
         Burger Count: <span className="text-xl font-bold">{burgerCount}</span>
       </p>
-      <button
-        className="px-2 py-1 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer"
-        onClick={() => {
-          dispatch(orderBurger())
-        }}>
-        Order Burger
-      </button>
+      <div className="flex gap-4">
+        <button
+          className="px-2 py-1 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer"
+          onClick={() => dispatch(orderBurger())}>
+          Order Burger
+        </button>
+
+        <button
+          className="px-2 py-1 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer"
+          onClick={() => dispatch(reStockBurger(15))}>
+          ReStock Burgers
+        </button>
+      </div>
     </div>
   )
 }
