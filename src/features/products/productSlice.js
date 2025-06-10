@@ -29,3 +29,6 @@ const productSlice = createSlice({
       })
   }
 })
+
+export default productSlice.reducer
+export { fetchProducts } // here since actions are internally created, we export fetchProducts in this case , the asyncThunk
