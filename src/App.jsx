@@ -7,10 +7,10 @@ import InventoryCard from './components/InventoryCard'
 // import { resetPizza } from './features/pizza/pizzaSlice'
 
 function App() {
-  const totalOrders = useSelector(state => {
-    let totalOrder = state.burger.burgerCount + state.pizza.pizzaCount
-    return totalOrder
-  })
+  // const totalOrders = useSelector(state => {
+  //   let totalOrder = state.burger.burgerCount + state.pizza.pizzaCount
+  //   return totalOrder
+  // })
 
   /** --- For Inventory data --- */
   const pizza = useSelector(state => state.pizza.pizzaCount)
