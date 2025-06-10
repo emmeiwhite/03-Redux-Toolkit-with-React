@@ -3,6 +3,7 @@ import BurgerView from './features/burger/burgerView'
 import { useDispatch, useSelector } from 'react-redux'
 import { globalReset } from './features/global/globalSlice'
 import InventoryCard from './components/InventoryCard'
+import ProductView from './features/products/ProductView'
 // import { resetBurger } from './features/burger/burgerSlice'
 // import { resetPizza } from './features/pizza/pizzaSlice'
 
@@ -49,7 +50,7 @@ function App() {
           <BurgerView />
         </main>
 
-        <div className="px-5 flex flex-col gap-10 mt-6 md:mt-10 text-center">
+        <div className="px-5 flex flex-col gap-10 mt-3 md:mt-5 text-center">
           {/* <p className="text-3xl">TOTAL ORDERS: {totalOrders}</p> */}
 
           <button
@@ -58,6 +59,8 @@ function App() {
             Reset Stock
           </button>
         </div>
+
+        <ProductView />
       </div>
     </>
   )

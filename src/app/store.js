@@ -7,7 +7,7 @@ const store = configureStore({
   reducer: {
     pizza: pizzaReducer,
     burger: burgerReducer,
-    products: productsReducer
+    product: productsReducer
   }
 })
 

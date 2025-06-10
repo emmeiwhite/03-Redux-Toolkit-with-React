@@ -8,7 +8,7 @@ const initialState = {
 }
 
 // Step-1: Define the Async Thunk | Remember that createAsyncThunk automatically generates 3 action types - pending, fulfilled and rejected
-const fetchProducts = createAsyncThunk('product/fetchProducts', () => {
+export const fetchProducts = createAsyncThunk('product/fetchProducts', () => {
   return axios.get('https://fakestoreapi.com/products').then(res => res.data)
 })
 
@@ -31,4 +31,3 @@ const productSlice = createSlice({
 })
 
 export default productSlice.reducer
-export { fetchProducts } // here since actions are internally created, we export fetchProducts in this case , the asyncThunk
