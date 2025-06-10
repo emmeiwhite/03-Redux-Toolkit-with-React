@@ -15,4 +15,5 @@ const pizzaSlice = createSlice({
 
 console.log(pizzaSlice)
 // Export action creators and reducer
-export const { pizzaReducer, actions } = pizzaSlice
+export const { orderPizza } = pizzaSlice.actions
+export const pizzaReducer = pizzaSlice.reducer
