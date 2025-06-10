@@ -5,6 +5,11 @@ import ReStockForm from '../../components/ReStockForm'
 const PizzaView = () => {
   const pizzaCount = useSelector(state => state.pizza.pizzaCount)
   const dispatch = useDispatch()
+
+  const handleRestock = qty => {
+    dispatch(reStockPizza(qty))
+  }
+
   return (
     <div className="py-12">
       <h1 className="text-2xl">Pizza Component</h1>
@@ -23,7 +28,7 @@ const PizzaView = () => {
           onClick={() => dispatch(reStockPizza(10))}>
           ReStock Pizzas
         </button> */}
-        <ReStockForm />
+        <ReStockForm onRestock={handleRestock} />
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ const BurgerView = () => {
 
   const dispatch = useDispatch()
 
-  const handleReStock = qty => {
+  const handleRestock = qty => {
     console.log(qty)
     // Now we'll reStock our burgers as per the quantity
     dispatch(reStockBurger(qty))
@@ -30,7 +30,7 @@ const BurgerView = () => {
           Order Burger
         </button>
 
-        <ReStockForm onRestock={handleReStock} />
+        <ReStockForm onRestock={handleRestock} />
       </div>
     </div>
   )
