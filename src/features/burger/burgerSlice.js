@@ -13,5 +13,6 @@ const burgerSlice = createSlice({
   }
 })
 
-export const { reducer } = burgerSlice
+// export burgerReducer and action creators
+export const burgerReducer = burgerSlice.reducer
 export const { orderBurger } = burgerSlice.actions
