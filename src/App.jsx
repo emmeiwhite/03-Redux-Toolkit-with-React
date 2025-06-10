@@ -1,4 +1,5 @@
-import PizzaView from './features/pizza/PizzaView'
+import PizzaView from './features/pizza/pizzaView'
+
 function App() {
   return (
     <>

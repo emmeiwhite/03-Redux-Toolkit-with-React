@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  pizzaCount: 30
+  pizzaCount: 1000
 }
+
 const pizzaSlice = createSlice({
   name: 'pizza',
   initialState,
