@@ -11,13 +11,13 @@ const PizzaView = () => {
   }
 
   return (
-    <div className="py-12">
+    <div className="md:py-12">
       <h1 className="text-2xl">Pizza Component</h1>
 
       <p className="my-4">
         Pizza Count: <span className="text-xl font-bold">{pizzaCount}</span>
       </p>
-      <div className="flex gap-4">
+      <div className="flex gap-4  items-center flex-wrap">
         <button
           disabled={pizzaCount === 0}
           className={`px-2 py-1 rounded transition  ${

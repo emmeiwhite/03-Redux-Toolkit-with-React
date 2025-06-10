@@ -14,11 +14,11 @@ const ReStockForm = ({ onRestock }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-4 flex gap-2 items-center">
+      className=" flex gap-2 items-center">
       <input
         type="number"
         value={qty}
-        onChange={e => setQty(Number(e.target.value))}
+        onChange={e => setQty(Number(e.target.value) || '')}
         placeholder="Enter quantity"
         className="px-2 py-1 border rounded w-32"
       />

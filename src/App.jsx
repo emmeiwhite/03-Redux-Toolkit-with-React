@@ -20,19 +20,27 @@ function App() {
   }
   return (
     <>
-      <main className="max-w-6xl mx-auto px-5 flex gap-10">
-        <PizzaView />
-        <BurgerView />
-      </main>
+      <div className="max-w-6xl mx-auto px-5">
+        <h1 className="text-center text-4xl py-12">
+          {' '}
+          <span className="text-red-600">Pizza</span> &{' '}
+          <span className="text-green-600">Burger</span> Shop
+        </h1>
 
-      <div className="max-w-6xl mx-auto px-5 flex flex-col gap-10">
-        <p className="text-3xl">TOTAL ORDERS COUNT: {totalOrders}</p>
+        <main className="flex flex-col md:flex-row gap-10 max-w-3xl mx-auto">
+          <PizzaView />
+          <BurgerView />
+        </main>
 
-        <button
-          className="px-2 py-1 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer max-w-[200px]"
-          onClick={handleReset}>
-          Reset
-        </button>
+        <div className="px-5 flex flex-col gap-10 mt-6 md:mt-10 text-center">
+          <p className="text-3xl">TOTAL ORDERS COUNT: {totalOrders}</p>
+
+          <button
+            className="px-6 py-1.5 rounded bg-orange-300 hover:bg-orange-400 transition cursor-pointer max-w-[200px] mx-auto"
+            onClick={handleReset}>
+            Reset
+          </button>
+        </div>
       </div>
     </>
   )
