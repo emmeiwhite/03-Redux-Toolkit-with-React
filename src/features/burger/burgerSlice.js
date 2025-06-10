@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { globalReset } from '../global/globalSlice'
 
 const initialState = {
   burgerCount: 110
@@ -9,10 +10,15 @@ const burgerSlice = createSlice({
   reducers: {
     orderBurger: state => {
       state.burgerCount--
-    },
-    resetBurger: state => {
-      state.burgerCount = 0
     }
+    // resetBurger: state => {
+    //   state.burgerCount = 0
+    // }
+  },
+  extraReducers: builder => {
+    builder.addCase(globalReset, state => {
+      state.burgerCount = 0
+    })
   }
 })
 

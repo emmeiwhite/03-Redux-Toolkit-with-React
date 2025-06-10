@@ -1,8 +1,9 @@
 import PizzaView from './features/pizza/pizzaView'
 import BurgerView from './features/burger/burgerView'
 import { useDispatch, useSelector } from 'react-redux'
-import { resetBurger } from './features/burger/burgerSlice'
-import { resetPizza } from './features/pizza/pizzaSlice'
+import { globalReset } from './features/global/globalSlice'
+// import { resetBurger } from './features/burger/burgerSlice'
+// import { resetPizza } from './features/pizza/pizzaSlice'
 
 function App() {
   const totalOrders = useSelector(state => {
@@ -13,8 +14,9 @@ function App() {
   const dispatch = useDispatch()
 
   const handleReset = () => {
-    dispatch(resetBurger())
-    dispatch(resetPizza())
+    // dispatch(resetBurger())
+    // dispatch(resetPizza())
+    dispatch(globalReset())
   }
   return (
     <>
